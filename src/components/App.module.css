@@ -1,0 +1,15 @@
+.homeWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(45, 2, 2);
+  gap: 75px;
+  color: white;
+  height: 50px;
+  font-size: large;
+}
+
+body {
+  background-color: rgba(43, 3, 3, 0.763);
+  color: white;
+}
