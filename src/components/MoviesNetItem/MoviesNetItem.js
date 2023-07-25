@@ -9,9 +9,9 @@ const MoviesNetItem = ({ title, poster, year, movieId }) => {
 
   return (
     <li className={styles.MoviesNetItem}>
-      <Link to={`/movies/${movieId}`}>
+      <Link to={`/movies/${movieId}`}    state={{ from: location }}>
       <img
-       state={{ from: location }}
+    
        src={poster ? `https://image.tmdb.org/t/p/w200/${poster}` : placeholder}
         alt={title}
         width="275"

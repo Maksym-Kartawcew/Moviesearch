@@ -4,7 +4,6 @@ import { toastConfig } from '../components/Loader/toastConfig';
 import { useSearchParams } from 'react-router-dom';
 import { Dna } from 'react-loader-spinner';
 
-import 'react-toastify/dist/ReactToastify.css';
 import styles from './Pages.module.css';
 
 import { fetchSearchedMovie } from 'services/api/api';
@@ -26,8 +25,6 @@ const SearchPage = () => {
         setIsLoading(true);
 
         const movies = await fetchSearchedMovie(searchMovie);
-
-        console.log(movies);
 
         setSearchMovies(movies);
 

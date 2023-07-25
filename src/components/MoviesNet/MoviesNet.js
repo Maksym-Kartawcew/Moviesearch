@@ -5,13 +5,13 @@ import styles from './MoviesNet.module.css';
 const MoviesNet = ({ dayMovies }) => {
   return (
     <ul className={styles.MoviesNetList}>
-      {dayMovies.map(movie => (
+      {dayMovies.map( ({id, title, name, poster_path, first_air_date, release_date}) => (
         <MoviesNetItem
-          key={movie.id}
-          movieId={movie.id}
-          title={movie.title ? movie.title : movie.name}
-          poster={movie.poster_path}
-          year={movie.first_air_date ? movie.first_air_date : movie.release_date}
+          key={id}
+          movieId={id}
+          title={title ? title : name}
+          poster={poster_path}
+          year={first_air_date ? first_air_date : release_date}
         />
       ))}
     </ul>

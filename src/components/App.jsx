@@ -1,8 +1,9 @@
 import React from 'react';
 import { Suspense, lazy } from 'react';
-import { NavLink, Routes, Route } from 'react-router-dom';
+import { Navigate, NavLink, Routes, Route } from 'react-router-dom';
 
 import styles from './App.module.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const SearchPage = lazy(() => import('../pages/SearchPage'));
@@ -21,6 +22,7 @@ export const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/SearchPage" element={<SearchPage />} />
           <Route path="/movies/:movieId/*" element={<MovieDetails />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         </Suspense>
       </main>

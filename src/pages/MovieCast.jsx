@@ -6,8 +6,6 @@ import { fetchMovieCast } from 'services/api/api';
 import { Dna } from 'react-loader-spinner';
 
 import profile from '../images/profile.png';
-
-import 'react-toastify/dist/ReactToastify.css';
 import styles from './Pages.module.css';
 
 const MovieCast = () => {
@@ -22,8 +20,6 @@ const MovieCast = () => {
     const fetchReviewsData = async () => {
       try {
         const castDetails = await fetchMovieCast(movieId);
-
-        console.log(castDetails);
 
         setMovieCast(castDetails);
       } catch (error) {
@@ -58,20 +54,20 @@ const MovieCast = () => {
       <div className={styles.MovieDetailsBox}>
         <h3>Cast</h3>
         {movieCast?.length > 0 ? (
-          <ul>
-            {movieCast.map(cast => (
-              <li key={cast.id}>
+          <ul>k
+            {movieCast.map(({ id, profile_path, character, name }) => (
+              <li key={id}>
                 <img
                   src={
-                    cast.profile_path
-                      ? `https://image.tmdb.org/t/p/w500/${cast.profile_path}`
+                    profile_path
+                      ? `https://image.tmdb.org/t/p/w500/${profile_path}`
                       : profile
                   }
-                  alt={movieCast.name}
+                  alt={name}
                   width="400"
                 />
-                <h2>{cast.name}</h2>
-                <p>{cast.character}</p>
+                <h2>{name}</h2>
+                <p>{character}</p>
               </li>
             ))}
           </ul>

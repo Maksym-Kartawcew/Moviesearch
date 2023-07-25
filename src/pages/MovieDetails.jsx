@@ -8,7 +8,6 @@ import { Dna } from 'react-loader-spinner';
 import { fetchMovieDetails } from '../services/api/api';
 import placeholder from '../images/cinema.png';
 
-import 'react-toastify/dist/ReactToastify.css';
 import styles from './Pages.module.css';
 
 const MovieReviews = lazy(() => import('../pages/MovieReviews'));

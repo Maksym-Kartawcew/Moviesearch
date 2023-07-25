@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom';
 import { fetchMovieReviews } from 'services/api/api';
 import { Dna } from 'react-loader-spinner';
 
-import 'react-toastify/dist/ReactToastify.css';
 import styles from './Pages.module.css';
 
 const MovieReviews = () => {
@@ -20,8 +19,6 @@ const MovieReviews = () => {
     const fetchReviewsData = async () => {
       try {
         const reviews = await fetchMovieReviews(movieId);
-
-        console.log(reviews);
 
         setMovieReviews(reviews);
       } catch (error) {
@@ -57,10 +54,10 @@ const MovieReviews = () => {
         <h3>Reviews</h3>
         {movieReviews?.length > 0 ? (
           <ul>
-            {movieReviews.map(review => (
-              <li key={review.id}>
-                <h2>{review.author}</h2>
-                <p>{review.content}</p>
+            {movieReviews.map(({ id, author, content }) => (
+              <li key={id}>
+                <h2>{author}</h2>
+                <p>{content}</p>
               </li>
             ))}
           </ul>
