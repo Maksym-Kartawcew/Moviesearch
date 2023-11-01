@@ -14,7 +14,11 @@ code {
     monospace;
 }
 
+li {
+  list-style: none;
+}
+
 a.active {
-  color: orange;
+  color: rgba(43, 110, 157, 0.796);
   font-weight: 700;
 }

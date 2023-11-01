@@ -52,9 +52,8 @@ const MovieCast = () => {
       )}
 
       <div className={styles.MovieDetailsBox}>
-        <h3>Cast</h3>
-        {movieCast?.length > 0 ? (
-          <ul>k
+               {movieCast?.length > 0 ? (
+          <ul className={styles.castList}>
             {movieCast.map(({ id, profile_path, character, name }) => (
               <li key={id}>
                 <img
@@ -64,7 +63,7 @@ const MovieCast = () => {
                       : profile
                   }
                   alt={name}
-                  width="400"
+                  width="250"
                 />
                 <h2>{name}</h2>
                 <p>{character}</p>

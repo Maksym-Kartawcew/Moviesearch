@@ -71,7 +71,7 @@ const MovieDetails = () => {
                 <img
                   src={movieDetails.poster_path ? `https://image.tmdb.org/t/p/w200/${movieDetails.poster_path}` : placeholder}
                   alt={movieDetails.title}
-                  width="400"
+                  max-width="400"
                 />
               </div>
 

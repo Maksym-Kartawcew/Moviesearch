@@ -1,17 +1,17 @@
 .MovieDetailsBox {
   display: flex;
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
-  padding: auto;
+  padding: 20px;
 }
 
 .MovieDetailsImg {
   margin: 15px;
-  width: 400px;
+  max-width: 100%;
 }
 
 .addInfBox {
-  width: 1200px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -28,7 +28,7 @@
 }
 
 input {
-  width: 350px;
+  max-width: 350px;
   height: 45px;
   border-radius: 5px;
   border: none;
@@ -51,8 +51,7 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  color: white;
+  margin-top: 20px;
 }
 
 .searchBtn {
@@ -77,8 +76,30 @@ input::placeholder {
 .MovieReviewsBox {
   display: flex;
   flex-direction: column;
-  width: 1200px;
-  margin: auto;
-  margin-bottom: 50px;
+  padding: 20px;
+  max-width: 1200px;
   justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.castList {
+  display: grid;
+  margin: 0 auto;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-row-gap: 50px;
+}
+
+@media (max-width: 900px) {
+  .castList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .castList {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

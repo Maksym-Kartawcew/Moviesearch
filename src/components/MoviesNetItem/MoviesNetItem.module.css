@@ -1,10 +1,9 @@
 .MoviesNetItem {
   width: 275px;
-  background-color: rgb(45, 2, 2);
-  color: white;
+  background-color: #A3C6C4;
+  color:#E0E7E9;
   text-align: center;
-
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 a {
