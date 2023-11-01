@@ -14,7 +14,7 @@ export const App = () => {
     <div>
       <header className={styles.homeWrap}>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/SearchPage">Search movies</NavLink>
+        <NavLink to="/SearchPage">Movies</NavLink>
       </header>
       <main>
       <Suspense>
